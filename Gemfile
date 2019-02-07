@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "5.0.2"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0"
 # Use Uglifier as compressor for JavaScript assets
@@ -59,9 +57,9 @@ group :development, :test do
   gem "draft_log", github: "firstdraft/draft_log"
   gem "dotenv-rails"
   gem "faker"
+  gem "sqlite3", "~> 1.3.6"
   gem "grade_runner", github: "firstdraft/grade_runner"
   gem "pry-rails"
-  gem "web_git", github: "firstdraft/web_git"
 end
 
 group :development do
@@ -72,6 +70,7 @@ group :development do
   gem "letter_opener"
   gem "meta_request"
   gem "wdm", platforms: [:mingw, :mswin, :x64_mingw]
+  gem "web_git", github: "firstdraft/web_git"
 end
 
 group :test do
@@ -79,6 +78,11 @@ group :test do
   gem "factory_bot_rails"
   gem "rspec-rails"
   gem "webmock"
+end
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
 end
 
 gem "devise"
