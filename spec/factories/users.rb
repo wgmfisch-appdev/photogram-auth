@@ -1,12 +1,12 @@
 FactoryBot.define do
   factory :user do
     sequence(:email) { |n| "test#{n}@example.com" }
-    sequence(:password) { |n| "password" }
+    password { "password" }
     sequence(:username) { |n| "person#{n}" }
 
     factory :user_with_photos do
       transient do
-        sequence(:photos_count) { |n| 1 }
+        photos_count { 1 }
       end
 
       after(:create) do |user, evaluator|
