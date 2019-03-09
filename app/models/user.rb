@@ -27,6 +27,6 @@ class User < ApplicationRecord
   validates :username, :presence =>true
   has_many :photos, :class_name => "Photo", :foreign_key => "user_id"
   has_many :liked_photos, :through => :likes, :source => :photo
-  has_many :comments, :through => :comments, :source => :photo
+  has_many :comments, :class_name => "Comment", :foreign_key => "user_id"
   
 end

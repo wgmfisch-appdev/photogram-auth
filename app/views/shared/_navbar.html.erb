@@ -29,11 +29,11 @@
       </ul>
       <ul class="navbar-nav">
         <% if current_user.blank? %>
-          <li class="nav-item">
-            <a href="/users/sign_in" class="nav-link">
-              Sign in
-            </a>
-          </li>
+          <!--<li class="nav-item">-->
+          <!--  <a href="/users/sign_in" class="nav-link">-->
+          <!--    woobwoobwoob-->
+          <!--  </a>-->
+          <!--</li>-->
 
           <li class="nav-item">
             <a href="/users/sign_up" class="nav-link">
@@ -43,7 +43,7 @@
         <% else %>
           <li class="nav-item">
             <a href="/users/edit" class="nav-link">
-              Edit profile
+              <%= current_user.username %>
             </a>
           </li>
 
