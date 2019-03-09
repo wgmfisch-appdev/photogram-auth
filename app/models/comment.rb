@@ -10,8 +10,5 @@
 #  user_id    :integer
 #
 
-FactoryBot.define do
-  factory :comment do
-    body {"this is a comment"}
-  end
+class Comment < ApplicationRecord
 end
